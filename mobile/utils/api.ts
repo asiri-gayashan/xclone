@@ -10,7 +10,7 @@ export const createApiClient = (getToken: () => Promise<string | null>): AxiosIn
 
   api.interceptors.request.use(async (config) => {
     const token = await getToken();
-    console.log("Attaching token to request:", token);
+    // console.log("Attaching token to request:", token);
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
