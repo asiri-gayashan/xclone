@@ -1,7 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { useUserSync } from "@/hooks/useUserSync";
 
-const index = () => {
+const Index = () => {
+
+  
+  
+  useUserSync();
+
   return (
     <View>
       <Text>Hello World</Text>
@@ -9,4 +15,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

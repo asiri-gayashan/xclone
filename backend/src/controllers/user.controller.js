@@ -26,6 +26,8 @@ export const updateProfile = asyncHandler(async (req, res) => {
 export const syncUser = asyncHandler(async (req, res) => {
   const { userId } = getAuth(req);
 
+  console.log("Syncing user module");
+
   // check if user already exists in mongodb
   const existingUser = await User.findOne({ clerkId: userId });
   if (existingUser) {
