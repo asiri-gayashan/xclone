@@ -1,9 +1,10 @@
 import axios, { AxiosInstance } from "axios";
 import { useAuth } from "@clerk/expo";
 
-// const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || "https://xclone-snowy-seven.vercel.app/api";
+const API_BASE_URL =  "https://xclone-snowy-seven.vercel.app/api";
 // const API_BASE_URL = "http://localhost:5001/api";
-const API_BASE_URL = "http://10.0.2.2:5001/api";
+// const API_BASE_URL = "http://10.0.2.2:5001/api";
+// const API_BASE_URL = "http://10.0.2.2:5002/api"; // docker
 
 export const createApiClient = (getToken: () => Promise<string | null>): AxiosInstance => {
   const api = axios.create({ baseURL: API_BASE_URL });

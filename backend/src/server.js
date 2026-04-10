@@ -25,6 +25,12 @@ app.use("/api/comments", commentRoutes);
 app.use("/api/notifications", notificationRoutes);
 
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    message: "backend is working",
+  });
+});
+
 
 const startServer = async () => {
   try {
