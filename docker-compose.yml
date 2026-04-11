@@ -1,0 +1,11 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: xclone-backend
+    restart: always
+    ports:
+      - "5002:5001"
+    env_file:
+      - ./backend/.env
